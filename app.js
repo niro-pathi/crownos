@@ -38,14 +38,21 @@ var bot = new builder.UniversalBot(connector);
 bot.set('storage', tableStorage);
 
 var recognizer = new builder_cognitiveservices.QnAMakerRecognizer({
-                knowledgeBaseId: process.env.QnAKnowledgebaseId, 
-    subscriptionKey: process.env.QnASubscriptionKey});
+                 knowledgeBaseId: process.env.QnAKnowledgebaseId, 
+                 subscriptionKey: process.env.QnASubscriptionKey});
 
 var basicQnAMakerDialog = new builder_cognitiveservices.QnAMakerDialog({
     recognizers: [recognizer],
                 defaultMessage: 'No match! Try changing the query terms!',
                 qnaThreshold: 0.3}
 );
+
+bot.dialog('welcome', [
+    function (session) {
+        // Send a greeting and show help.
+        builder.Prompts.text(session, "Hi! How can I help you?");
+    }
+]);
 
 bot.dialog('basicQnAMakerDialog', basicQnAMakerDialog);
 
