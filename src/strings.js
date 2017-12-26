@@ -7,12 +7,12 @@ module.exports = {
     INTRO_BUTTON_VALUE: 'Want to know more?',
 
     HELP_BUTTON_TITLE_ASK: 'Ask a question',
-    HELP_CARD_TEXT: 'Select a command to learn how to use it.',
+    HELP_CARD_TEXT: 'You can ask me anything about Crown Connect.Select a command to learn how to use it.',
     HELP_CHECK_THE_FAQ: 'Check the FAQ Confluance page',
-    HELP_ASK_A_QUESTION: 'Ask a question and get the answer(s). Please start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
+    HELP_ASK_A_QUESTION: 'You can ask me anything about Crown Connect.Please start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
     
-    NO_MATCH_FROM_SERVICE: 'Crownos was not able to find an answer for your question',
+    NO_MATCH_FROM_SERVICE: 'Sorry, this may be beyond my abilities at the moment.Try asking for **help**',
     NO_ANSWER_FOUND: 'No good match found in the KB',
     PROPOSE_QUESTION_CARD_TITLE: 'Are these questions you want to ask?',
-    FAQ_URL: 'https://azure.microsoft.com/en-us/support/faq/'
+    FAQ_URL: 'https://crownmelbourne.atlassian.net/wiki/spaces/PLUP/pages/45711648/Loyalty+Post+Release+FAQ'
 };
