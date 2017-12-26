@@ -34,39 +34,7 @@ var azureTableClient = new botbuilder_azure.AzureTableClient(tableName, process.
 var tableStorage = new botbuilder_azure.AzureBotStorage({ gzipData: false }, azureTableClient);
 
 // Create your bot with a function to receive messages from the user
-//var bot = new builder.UniversalBot(connector);
-var bot = new builder.UniversalBot(connector, [
-    (session) => {
-        builder.Prompts.choice(session,
-            'What do yo want to do today?',
-            [ChangePasswordOption, ResetPasswordOption],
-            { listStyle: builder.ListStyle.button });
-    },
-    (session, result) => {
-        if (result.response) {
-            switch (result.response.entity) {
-                case ChangePasswordOption:
-                    session.send('This functionality is not yet implemented! Try resetting your password.');
-                    session.reset();
-                    break;
-                case ResetPasswordOption:
-                    session.beginDialog('resetPassword:/');
-                    break;
-            }
-        } else {
-            session.send(`I am sorry but I didn't understand that. I need you to select one of the options below`);
-        }
-    },
-    (session, result) => {
-        if (result.resume) {
-            session.send('You identity was not verified and your password cannot be reset');
-            session.reset();
-        }
-    }
-]);
-
-
-
+var bot = new builder.UniversalBot(connector);
 
 bot.set('storage', tableStorage);
 
@@ -76,7 +44,7 @@ var recognizer = new builder_cognitiveservices.QnAMakerRecognizer({
 
 var basicQnAMakerDialog = new builder_cognitiveservices.QnAMakerDialog({
     recognizers: [recognizer],
-                defaultMessage: 'No match! Try changing the query terms!',
+                defaultMessage: "Sorry, this may be beyond my abilities at the moment.Try asking for 'help'",
                 qnaThreshold: 0.3}
 );
 
@@ -89,7 +57,7 @@ bot.dialog('welcome', [
 
 bot.dialog('basicQnAMakerDialog', basicQnAMakerDialog);
 
-bot.dialog('/', //basicQnAMakerDialog);
+bot.dialog('/', basicQnAMakerDialog
 [
     function (session){
         var qnaKnowledgebaseId = process.env.QnAKnowledgebaseId;
