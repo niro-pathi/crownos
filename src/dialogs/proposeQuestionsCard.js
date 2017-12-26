@@ -6,8 +6,6 @@ const faqFetcher = require('../controller/faqFetcher');
 const buildCardUtils = require('../utils/buildCardUtils');
 const strings = require('../strings');
 
-console.log("00 Inside proposeQuestionsCard ");
-
 module.exports = function () {
     bot.dialog('proposeQuestionsCard', [
         (session, args, next) => {

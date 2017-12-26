@@ -2,8 +2,6 @@
 
 const strings = require('../strings');
 
-console.log("00 Inside buildCardUtils ");
-
 module.exports = function () {
     function buildCard(session, result) {
         let subTitleText = result.question ? 

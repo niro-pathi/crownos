@@ -14,8 +14,6 @@ module.exports = function () {
             session.options.autoBatchDelay = 1000;
             let question = session.message.text;
             
-            console.log('Q : ' + question);
-
             if (question) {
                 qnaQueryService
                     .query(question, strings.QUERY_RESULT_COUNTS)
@@ -32,8 +30,6 @@ module.exports = function () {
                 if (results) {
                     var resultsJson = JSON.parse(results);
                     data = resultsJson.answers;
-
-                    console.log('A : ' + data[0].answer);
 
                     if (data && !_.isEmpty(data)) {
                         if (data.length == 1 && data[0].answer === strings.NO_ANSWER_FOUND) {
