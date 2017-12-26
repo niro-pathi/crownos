@@ -1,3 +1,5 @@
+console.log("00 Inside faqFetcher ");
+
 var request = require('request');
 var url = require('url');
 const qnaQueryService = require('../controller/qnaQueryService');
