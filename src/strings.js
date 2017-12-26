@@ -12,7 +12,7 @@ module.exports = {
     HELP_ASK_A_QUESTION: 'Ask a question and get the answer(s). Please start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
     
     NO_MATCH_FROM_SERVICE: 'Crownos was not able to find an answer for your question',
-    NO_ANSWER_FOUND: 'No good match found in the FAQ',
+    NO_ANSWER_FOUND: 'No good match found in the KB',
     PROPOSE_QUESTION_CARD_TITLE: 'Are these questions you want to ask?',
     FAQ_URL: 'https://azure.microsoft.com/en-us/support/faq/'
 };
