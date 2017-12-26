@@ -119,7 +119,7 @@ basicQnAMakerDialog.defaultWaitNextMessage = function(session, qnaMakerResult){
     session.endDialog();
 }
 
-bot.dialog('/', basicQnAMakerDialog);
+// bot.dialog('/', basicQnAMakerDialog);
 
 /*
 bot.dialog('welcome', [
@@ -130,8 +130,9 @@ bot.dialog('welcome', [
 ]);
 
 bot.dialog('basicQnAMakerDialog', basicQnAMakerDialog);
+*/
 
-bot.dialog('/',
+bot.dialog('/',basicQnAMakerDialog
 [
     function (session){
         var qnaKnowledgebaseId = process.env.QnAKnowledgebaseId;
@@ -144,4 +145,4 @@ bot.dialog('/',
             session.replaceDialog('basicQnAMakerDialog');
     }
 ]);
-*/
+
