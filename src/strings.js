@@ -9,7 +9,7 @@ module.exports = {
     HELP_BUTTON_TITLE_ASK: 'Ask a question',
     HELP_CARD_TEXT: 'Select a command to learn how to use it.',
     HELP_CHECK_THE_FAQ: 'Check the FAQ Confluance page',
-    HELP_ASK_A_QUESTION: 'Ask a question and get the answer(s). Please start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Cr0wn Connect?',
+    HELP_ASK_A_QUESTION: 'Ask a question and get the answer(s). Please start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
     
     NO_MATCH_FROM_SERVICE: 'Crownos was not able to find an answer for your question',
     NO_ANSWER_FOUND: 'No good match found in the FAQ',
