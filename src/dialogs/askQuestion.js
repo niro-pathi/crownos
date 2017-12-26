@@ -8,6 +8,7 @@ require('../dialogs/proposeQuestionsCard')();
 
 module.exports = function () {
     var data;
+    console.log('Inside askQuestion : ' + data);
 
     bot.dialog('askQuestion', [
         (session, args, next) => {
