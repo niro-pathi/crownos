@@ -42,7 +42,7 @@ bot.on('contactRelationUpdate', (message) => {
 
 bot.dialog('/', [
     (session, args) => {
-        session.beginDialog('Help');
+        session.beginDialog('help');
     }
 ]);
 
