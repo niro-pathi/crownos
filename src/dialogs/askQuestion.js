@@ -8,8 +8,7 @@ require('../dialogs/proposeQuestionsCard')();
 
 module.exports = function () {
     var data;
-    console.log('Inside askQuestion : ' + data);
-
+    
     bot.dialog('askQuestion', [
         (session, args, next) => {
             session.options.autoBatchDelay = 1000;
@@ -34,7 +33,7 @@ module.exports = function () {
                     var resultsJson = JSON.parse(results);
                     data = resultsJson.answers;
 
-                    console.log('A : ' + data[0].answern);
+                    console.log('A : ' + data[0].answer);
 
                     if (data && !_.isEmpty(data)) {
                         if (data.length == 1 && data[0].answer === strings.NO_ANSWER_FOUND) {

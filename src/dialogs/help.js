@@ -1,8 +1,6 @@
 const strings = require('../strings');
 require('./askQuestion.js')();
 
-console.log("00 Inside Helper ");
-
 module.exports = function () {
 
     bot.dialog('help', 
@@ -14,8 +12,6 @@ module.exports = function () {
                 let card = getHelpCard(session);
                 message = new builder.Message(session).addAttachment(card);
             }
-
-            console.log("05 Inside Helper " + message);
 
             session.endDialog(message);
         }

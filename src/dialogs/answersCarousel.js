@@ -3,6 +3,8 @@
 const _ = require('lodash');
 const buildCardUtils = require('../utils/buildCardUtils');
 
+console.log("00 Inside answersCarousel ");
+
 module.exports = function () {
     bot.dialog('answersCarousel', [
         (session, args, next) => {
