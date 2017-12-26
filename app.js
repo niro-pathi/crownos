@@ -132,7 +132,7 @@ bot.dialog('welcome', [
 bot.dialog('basicQnAMakerDialog', basicQnAMakerDialog);
 */
 
-bot.dialog('/',basicQnAMakerDialog
+bot.dialog('/'
 [
     function (session){
         var qnaKnowledgebaseId = process.env.QnAKnowledgebaseId;
