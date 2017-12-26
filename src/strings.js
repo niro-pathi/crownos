@@ -1,7 +1,7 @@
 module.exports = {
     QUERY_RESULT_COUNTS: 3,
 
-    INTRO_TITLE: 'I am the Crownos bot.',
+    INTRO_TITLE: 'I am Crownos.',
     INTRO_TEXT: 'I am here to help you find answer(s) of Crown Connect Support questions. You can also check the FAQ on Confluance.',
     INTRO_BUTTON_TITLE: 'Help',
     INTRO_BUTTON_VALUE: 'Want to know more?',
