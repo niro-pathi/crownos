@@ -119,30 +119,4 @@ basicQnAMakerDialog.defaultWaitNextMessage = function(session, qnaMakerResult){
     session.endDialog();
 }
 
-// bot.dialog('/', basicQnAMakerDialog);
-
-/*
-bot.dialog('welcome', [
-    function (session) {
-        // Send a greeting and show help.
-        builder.Prompts.text(session, "Hi! How can I help you?");
-    }
-]);
-
-bot.dialog('basicQnAMakerDialog', basicQnAMakerDialog);
-*/
-
-bot.dialog('/'
-[
-    function (session){
-        var qnaKnowledgebaseId = process.env.QnAKnowledgebaseId;
-        var qnaSubscriptionKey = process.env.QnASubscriptionKey;
-        
-        // QnA Subscription Key and KnowledgeBase Id null verification
-        if((qnaSubscriptionKey == null || qnaSubscriptionKey == '') || (qnaKnowledgebaseId == null || qnaKnowledgebaseId == ''))
-            session.send('Please set QnAKnowledgebaseId and QnASubscriptionKey in App Settings. Get them at https://qnamaker.ai.');
-        else
-            session.replaceDialog('basicQnAMakerDialog');
-    }
-]);
-
+bot.dialog('/', basicQnAMakerDialog);
