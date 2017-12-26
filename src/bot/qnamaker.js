@@ -27,9 +27,12 @@ bot.set('storage', tableStorage);
 require('../dialogs/intro.js')();
 require('../dialogs/help.js')();
 
-console.log("Inside QNA Maker ");
+console.log("00 Inside QNA Maker ");
 
 bot.on('contactRelationUpdate', (message) => {
+    
+    console.log("05 Inside QNA Maker : " + message.action);
+
     if (message.action == 'add') {
         bot.beginDialog(message.address, 'intro');
     } else if (message.action == 'remove') {
@@ -40,6 +43,8 @@ bot.on('contactRelationUpdate', (message) => {
         session.dialogData = {};
     }
 });
+
+console.log("10 Inside QNA Maker ");
 
 bot.dialog('/', [
     (session, args) => {
