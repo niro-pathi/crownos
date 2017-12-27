@@ -20,12 +20,9 @@ console.log('020 Inside checkPlatform ');
 
 bot.dialog('VIK_Status', [
     function (session,args,next) {
-
-           const msg = new builder.Message(session)
-                      .addAttachment({
-            //adaptive card body here with Action.submit buttons...
-           });
-           session.send(msg);
+           session.send('Welcome to the VIK status finder! We are analyzing your message: \'%s\'', session.message.text);        
     }
-]).triggerAction({ matches : 'VIK_Status'});
+]).triggerAction({ 
+    matches : 'VIK Status'
+});
 //VIK_Status is an intent in my LUIS app.
