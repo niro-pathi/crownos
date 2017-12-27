@@ -8,6 +8,9 @@ module.exports = function () {
             let message = '';
             if (session.message.text == 'Ask a Question') {
                 message = strings.HELP_ASK_A_QUESTION;
+            }
+            else if (session.message.text == 'Check Platform Status') {
+                message = strings.STAT_ASK_A_QUESTION;
             } else {
                 let card = getHelpCard(session);
                 message = new builder.Message(session).addAttachment(card);
