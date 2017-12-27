@@ -26,17 +26,8 @@ module.exports = function () {
             .text(strings.HELP_CARD_TEXT)
             .buttons([
                 new builder.CardAction(session).title(strings.HELP_BUTTON_TITLE_ASK).value('Ask a question').type('postBack'),
+                new builder.CardAction(session).title(strings.FIX_BUTTON_TITLE_ASK).value('Make a Data Fix').type('postBack'),
                 new builder.CardAction(session).title(strings.HELP_CHECK_THE_FAQ).value(strings.FAQ_URL).type('openUrl'),
-            ]);
-            
-        return new builder.HeroCard()
-            .title('Help')
-            .text(strings.HELP_CARD_TEXT)
-            .buttons([
-                new builder.CardAction(session).title(strings.HELP_BUTTON_TITLE_ASK).value('Ask a question').type('postBack'),
-                new builder.CardAction(session).title(strings.HELP_CHECK_THE_FAQ).value(strings.FAQ_URL).type('openUrl'),
-            ]);
-
+            ]);       
     }    
-
 };
