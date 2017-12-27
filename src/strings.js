@@ -11,10 +11,10 @@ module.exports = {
     HELP_CHECK_THE_FAQ: 'Check the FAQ Confluance page',
     HELP_ASK_A_QUESTION: 'You can ask me anything about Crown Connect.\nPlease start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
     
-    FIX_BUTTON_TITLE_ASK: 'Make a Data Fix',
-    FIX_CARD_TEXT: 'You can ask me anything about Crown Connect data fixes.\nSelect a command to learn how to use it.',
-    FIX_CHECK_THE_FAQ: 'Check the Data Fix Confluance page',
-    FIX_ASK_A_QUESTION: 'You can ask me anything about Crown Connect data fix.\nPlease start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',
+    STAT_BUTTON_TITLE_ASK: 'Check Platform Status',
+    STAT_CARD_TEXT: 'You can check Crown Connect platform status.\nSelect a command to learn how to use it.',
+    STAT_CHECK_THE_FAQ: 'Check the Crown Connect Platform status page',
+    STAT_ASK_A_QUESTION: 'You can ask me anything about Crown Connect platform status.\nFor example: VIK Status?',
 
     NO_MATCH_FROM_SERVICE: 'Sorry, this may be beyond my abilities at the moment. \nTry asking for **help**',
     NO_ANSWER_FOUND: 'No good match found in the KB',

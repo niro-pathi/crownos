@@ -45,6 +45,6 @@ module.exports = function () {
             }
         }
     ]).triggerAction({
-        matches: /(what is|Question:|How to|How do|How|Does|Do|I have a question|Is there|where).*\?$/i
+        matches: /(what is|will|Question:|How to|How do|How|Does|Do|I have a question|Is there|where).*\?$/i
     });
 };
