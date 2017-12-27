@@ -6,7 +6,7 @@ module.exports = {
     INTRO_BUTTON_TITLE: 'Help',
     INTRO_BUTTON_VALUE: 'Want to know more?',
 
-    HELP_BUTTON_TITLE_ASK: 'Ask a question',
+    HELP_BUTTON_TITLE_ASK: 'Ask a Question',
     HELP_CARD_TEXT: 'You can ask me anything about Crown Connect.\nSelect a command to learn how to use it.',
     HELP_CHECK_THE_FAQ: 'Check the FAQ Confluance page',
     HELP_ASK_A_QUESTION: 'You can ask me anything about Crown Connect.\nPlease start the question with **what is, How, Does, Do, Is there, Where**, and end the question with a question mark. For example: What is Crown Connect?',

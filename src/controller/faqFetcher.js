@@ -61,7 +61,7 @@ module.exports = function () {
 
             if (position != -1 && counts < strings.QUERY_RESULT_COUNTS) {
                 counts = counts + 1;
-                item = item.substring(item.indexOf('\n') + 1).replace(/[\t|\r|\n]/g, '').replace('https://azure.microsoft.com/en-us/support/faq/', '');
+                item = item.substring(item.indexOf('\n') + 1).replace(/[\t|\r|\n]/g, '').replace('https://crownmelbourne.atlassian.net/wiki/spaces/PLUP/pages/45711648/Loyalty+Post+Release+FAQ', '');
 
                 var model = new faqModel(item, faq[i + 1].replace(/[\t|\r?|\n|\r\\n?]/g, ''));
 

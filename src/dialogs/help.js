@@ -6,7 +6,7 @@ module.exports = function () {
     bot.dialog('help', 
         (session) => {
             let message = '';
-            if (session.message.text == 'Ask a question') {
+            if (session.message.text == 'Ask a Question') {
                 message = strings.HELP_ASK_A_QUESTION;
             } else {
                 let card = getHelpCard(session);
