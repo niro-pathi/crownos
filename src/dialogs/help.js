@@ -1,11 +1,14 @@
 const strings = require('../strings');
 require('./askQuestion.js')();
-require('./checkPlatform.js');
+//require('./checkPlatform.js');
 
 module.exports = function () {
 
     bot.dialog('help', 
         (session) => {
+
+            console.log('10 Inside help ' + session.message.text);
+            
             let message = '';
             if (session.message.text == 'Ask a Question') {
                 message = strings.HELP_ASK_A_QUESTION;
