@@ -7,16 +7,18 @@ var luisAPIKey = process.env.LuisAPIKey;
 var luisAPIHostName = process.env.LuisAPIHostName || 'westus.api.cognitive.microsoft.com';
 
 const LuisModelUrl = 'https://' + luisAPIHostName + '/luis/v1/application?id=' + luisAppId + '&subscription-key=' + luisAPIKey;
-
-// Main dialog with LUIS
+ // Main dialog with LUIS
 var recognizer = new builder.LuisRecognizer(LuisModelUrl);
 var intents = new builder.IntentDialog({ recognizers: [recognizer] })
-.matches('VIK_Status', (session) => {
-     session.send('Hi there, \%s\. I am Corion, Your Crown Connect Assistance. How can I help you today.', session.message.user.name);
-})
 
-.onDefault((session) => {
-    session.send("Sorry, this may be beyond my abilities at the moment.Try asking for 'help'");
-});
+bot.dialog('VIK_Status', [
+    function (session,args,next) {
 
-bot.dialog('/intents', intents);    
+           const msg = new builder.Message(session)
+                      .addAttachment({
+            //adaptive card body here with Action.submit buttons...
+           });
+           session.send(msg);
+    }
+]).triggerAction({ matches : 'VIK_Status'});
+//VIK_Status is an intent in my LUIS app.
