@@ -23,6 +23,6 @@ bot.dialog('VIK_Status', [
            session.send('Welcome to the VIK status finder! We are analyzing your message: \'%s\'', session.message.text);        
     }
 ]).triggerAction({ 
-    matches : 'VIK Status'
+    matches : 'VIK Status'    
 });
 //VIK_Status is an intent in my LUIS app.

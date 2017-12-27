@@ -1,6 +1,6 @@
 const strings = require('../strings');
 require('./askQuestion.js')();
-//require('./checkPlatform.js');
+require('./checkPlatform.js');
 
 module.exports = function () {
 
