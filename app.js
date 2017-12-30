@@ -1,7 +1,18 @@
 require('dotenv').config();
 
+const appInsights = require("applicationinsights");
 const restify = require('restify');
 const qnamaker = require('./src/bot/qnamaker.js');
+
+appInsights.setup()
+           .setAutoDependencyCorrelation(true)
+           .setAutoCollectRequests(true)
+           .setAutoCollectPerformance(true)
+           .setAutoCollectExceptions(true)
+           .setAutoCollectDependencies(true)
+           .setAutoCollectConsole(true)
+           .setUseDiskRetryCaching(true)
+           .start();
 
 // Setup Restify Server
 var server = restify.createServer();
